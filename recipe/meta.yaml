@@ -13,6 +13,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -22,8 +23,8 @@ requirements:
 
   run:
     - python
-    - networkx
-    - colormath
+    - networkx ==2.0
+    - colormath ==3.0.0
 
 test:
   imports:
