@@ -1,6 +1,6 @@
 {% set name = "spectra" %}
-{% set version = "0.0.7" %}
-{% set sha256 = "a4053ea70d437fd0ab5afb9e4a5295b400b53681c4a6c990b2a0dc7659f68b5a" %}
+{% set version = "0.0.10" %}
+{% set sha256 = "31300e339d88a051cccfa174e22a0e5317553c048434869196b2ab7b70dcf091" %}
 
 package:
   name: {{ name|lower }}
@@ -13,6 +13,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -22,7 +23,8 @@ requirements:
 
   run:
     - python
-    - colormath
+    - networkx ==2.0
+    - colormath ==3.0.0
 
 test:
   imports:
@@ -40,11 +42,7 @@ about:
     inspired by chroma.js and d3's scales.
   license: MIT
   license_family: MIT
-  # PyPI missing license file. Added PR to add it to future sdists.
-  #
-  # xref: https://github.com/jsvine/spectra/pull/6
-  #
-  #license_file: LICENSE.txt
+  license_file: LICENSE.txt
   dev_url: https://github.com/jsvine/spectra
   doc_url: https://github.com/jsvine/spectra
 
