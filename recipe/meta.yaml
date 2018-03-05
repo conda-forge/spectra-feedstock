@@ -1,6 +1,6 @@
 {% set name = "spectra" %}
-{% set version = "0.0.10" %}
-{% set sha256 = "31300e339d88a051cccfa174e22a0e5317553c048434869196b2ab7b70dcf091" %}
+{% set version = "0.0.11" %}
+{% set sha256 = "8eb362a5187cb63cee13cd01186799c0c791a3ad3bec57b279132e12521762b8" %}
 
 package:
   name: {{ name|lower }}
