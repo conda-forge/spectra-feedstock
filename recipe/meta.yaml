@@ -13,15 +13,13 @@ source:
 
 build:
   noarch: python
-  number: 0
-  noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - colormath >=3.0.0
