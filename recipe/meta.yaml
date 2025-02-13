@@ -1,6 +1,6 @@
 {% set name = "spectra" %}
-{% set version = "0.0.11" %}
-{% set sha256 = "8eb362a5187cb63cee13cd01186799c0c791a3ad3bec57b279132e12521762b8" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "6a30e33241cb18256020395181cb4cc029dcac6de6f8d78cecbed81c14226a3f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
